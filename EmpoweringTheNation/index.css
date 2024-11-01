@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+nav a.login-btn {
+    padding: 10px 20px;
+    background-color: #FFA500; /* Orange background */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a.login-btn:hover {
+    background-color: #e69500;
+}
+
+/* Main Section */
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+    background-color: white;
+    background: linear-gradient(to right, white 50%, #FFA500 50%);
+}
+
+.left-content {
+    width: 60%;
+    padding-right: 20px;
+}
+
+.right-content {
+    width: 40%;
+}
+
+.main-section h1 {
+    color: #00A5CF; /* Bright blue */
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.main-section h2 {
+    color: #555;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.main-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.get-started-btn {
+    display: inline-block;
+    background-color: #88CC46; /* Green */
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.get-started-btn:hover {
+    background-color: #76b83b;
+}
+
+/* Right Section Image */
+.right-content img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+        padding: 20px;
+        background: white;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .right-content img {
+        max-height: 300px;
+    }
+}

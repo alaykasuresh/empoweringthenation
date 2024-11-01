@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Account</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="create-account-page">
+
+        <!-- Back Button to index page -->
+        <a href="index.html" class="back-btn">← Back</a>
+
+        <!-- Form Section -->
+        <div class="form-container">
+            <h1>Create new Account</h1>
+            <p>Already Registered? <a href="login.html">Login</a></p>
+
+            <!-- Account Creation Form -->
+            <form action="signup_success.html" method="POST">
+                <label for="name">NAME</label>
+                <input type="text" id="name" name="name" placeholder="Name Surname" required>
+
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" placeholder="hello@reallygreatsite.com" required>
+
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="password" placeholder="******" required>
+
+                <label for="dob">DATE OF BIRTH</label>
+                <select id="dob" name="dob" required>
+                    <option value="" disabled selected>Select</option>
+                    <!-- Add options for DOB here -->
+                    <option value="1990">1990</option>
+                    <option value="1991">1991</option>
+                    <option value="1992">1992</option>
+                    <!-- Add more years as needed -->
+                </select>
+
+                <button type="submit" class="signup-btn">sign up</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

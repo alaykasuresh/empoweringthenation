@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 150px;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    margin: 0 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:hover, nav a.active {
+    color: orange;
+}
+
+.user-icon img {
+    width: 40px;
+}
+
+/* Main Courses Section */
+.courses-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.form-section {
+    width: 50%;
+    padding-right: 20px;
+}
+
+form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form textarea {
+    height: 120px;
+}
+
+.course-selection {
+    width: 40%;
+    background: linear-gradient(135deg, #ff9800 0%, #ffcc00 100%);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-selection h3 {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.courses {
+    margin-bottom: 30px;
+}
+
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: black;
+}
+
+.course-checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: limegreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calculate-btn:hover {
+    background-color: green;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .courses-section {
+        flex-direction: column;
+    }
+
+    .form-section, .course-selection {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

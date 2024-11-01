@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f5f5f5; /* Light background for better shape visibility */
+    min-height: 100vh; /* Ensure body has height */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 100px;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    margin: 0 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+
+nav a:hover, nav a.active {
+    color: orange;
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    bottom: -5px;
+    left: 0;
+}
+
+.user-icon img {
+    width: 40px;
+}
+/* About Page Styling */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    position: relative;
+    z-index: 3; /* Make sure content is on top */
+}
+
+.about-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    font-weight: bold;
+    color: black;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Curved Background Shape */
+.main-section {
+    position: relative; /* Make pseudo-elements relative to this section */
+    min-height: 100vh; /* Ensure section has height for shapes */
+    padding: 100px; /* Add padding for content visibility */
+    z-index: 2;
+    overflow: hidden; /* Hide any overflow */
+    background-color: #ffffff; /* Add background color to highlight shapes */
+}
+
+.main-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; /* Adjusted width */
+    height: 100%; /* Full height of section */
+    background: linear-gradient(135deg, #ff9800 0%, #ffcc00 100%);
+    clip-path: ellipse(60% 100% at 100% 0%);
+    z-index: 1;
+}
+
+.main-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150px; /* Increased width for visibility */
+    height: 150px; /* Increased height for visibility */
+    background: linear-gradient(135deg, #ff9800 0%, #ffcc00 100%);
+    clip-path: ellipse(100% 100% at 0% 100%);
+    z-index: 1;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #00bcd4;
+    border-bottom: 2px solid #00bcd4;
+}
+
+.profile-icon img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+/* Main Section */
+main {
+    padding: 50px;
+}
+
+.course-category h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Course Containers */
+.course-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.course-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 350px;
+    position: relative;
+}
+
+.course-box h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.course-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.course-box p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.course-box ul {
+    list-style: none;
+}
+
+.course-box ul li {
+    margin-bottom: 10px;
+}
+
+.course-box ul li a {
+    text-decoration: none;
+    color: #00bcd4;
+}
+
+.course-box ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Learn More Button */
+.learn-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.learn-more-btn:hover {
+    background-color: #43a047;
+}
+
+/* Background Shape */
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(135deg, #ff9800 0%, #ffcc00 100%);
+    clip-path: ellipse(60% 100% at 0% 0%);
+    z-index: -1;
+}
+
+main::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #ff9800 0%, #ffcc00 100%);
+    clip-path: ellipse(100% 100% at 100% 100%);
+    z-index: -1;
+}
